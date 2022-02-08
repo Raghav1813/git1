@@ -1,24 +1,30 @@
+
 #include <iostream>
-#include <vector>
 using namespace std;
 int main()
 {
-	vector<int> vector1 {};
-    vector<int> vector2 {};
-    vector1.push_back(10);
-    vector1.push_back(20) ;
-    cout<<" "<<vector1.at(0)<<endl;
-    cout<<" "<<vector1.at(1)<<endl;
-    cout<<"size of vector 1 is : "<<vector1.size()<<endl;
-    vector2.push_back(100);
-    vector2.push_back(200) ;
-    cout<<" "<<vector2.at(0)<<endl;
-    cout<<" "<<vector2.at(1)<<endl;
-    cout<<"size of vector 2 is : "<<vector1.size()<<endl;
-    vector<vector<int>> vector_2d {};
-    vector_2d.push_back(vector1);
-    vector_2d.push_back(vector2);
-    cout<<vector_2d.at(0).at(0)<<" "<<vector_2d.at(0).at(1)<<endl;
-    cout<<vector_2d.at(1).at(0)<<" "<<vector_2d.at(1).at(1)<<endl;
-    return 0;
+	int cent {};
+    const int dollar_value {100};
+    const int quatar_value {25};
+    const int dime_value {10};
+    const int nickel_value {5};
+    const int penny_value {1};
+    cout<<"enter an amount of cents : ";
+    cin>>cent;
+    int balance{}, dollar{}, quatar{}, dime{}, nickel{}, penny{};
+    dollar = cent/dollar_value;
+    balance = cent - (dollar*dollar_value);
+    quatar = balance/quatar_value;
+    balance -= quatar*quatar_value;
+    dime = balance/dime_value;
+    balance -= dime*dime_value;
+    nickel = balance/nickel;
+    balance -= nickel*nickel_value;
+    penny = balance;
+    cout<<"dollars is/are : "<<dollar<<endl;
+    cout<<"quatar is/are : "<<quatar<<endl;
+    cout<<"dime is/are : "<<dime<<endl;
+    cout<<"dnickel is/are : "<<nickel<<endl;
+    cout<<"penny is/are : "<<penny<<endl;
+	return 0;
 }

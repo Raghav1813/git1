@@ -1,4 +1,3 @@
-
 #include <iostream>
 using namespace std;
 int main()
@@ -12,14 +11,14 @@ int main()
     cout<<"enter an amount of cents : ";
     cin>>cent;
     int balance{}, dollar{}, quatar{}, dime{}, nickel{}, penny{};
-    dollar = cent/dollar_value;
+    dollar = (cent/dollar_value);
     balance = cent - (dollar*dollar_value);
-    quatar = balance/quatar_value;
-    balance -= quatar*quatar_value;
-    dime = balance/dime_value;
-    balance -= dime*dime_value;
-    nickel = balance/nickel;
-    balance -= nickel*nickel_value;
+    quatar = (balance/quatar_value);
+    balance -= (quatar*quatar_value);
+    dime = (balance/dime_value);
+    balance -= (dime*dime_value);
+    nickel = (balance/nickel);
+    balance -= (nickel*nickel_value);
     penny = balance;
     cout<<"dollars is/are : "<<dollar<<endl;
     cout<<"quatar is/are : "<<quatar<<endl;

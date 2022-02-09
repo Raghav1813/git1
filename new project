@@ -1,0 +1,59 @@
+#include <iostream>
+using namespace std;
+int main(){
+	char selection {};
+    int  a[]= {6, 1, 3, 4, 5};
+    cout<<"Enter your choice : ";
+    cin>>selection;
+    if (selection=='p' || selection=='P'){
+        for (int i = 0; i<5; i++){
+             cout<<a[i]<<endl;}
+    }
+    else if (selection=='a' || selection=='A'){
+        int sum {0};
+        for(int j=0; j<5; j++){
+        sum += a[j];}
+        cout<<sum<<endl;
+    }
+    else if (selection=='m' || selection=='M'){
+        double avg {};
+            int add {0};
+        for(int k =0; k<5; k++){
+            add = add+a[k];
+        avg += add/5;}
+        cout<<avg<<endl;
+    }
+    else if (selection == 's' || selection =='S'){
+        int temp {};
+        for (int l= 0; l<5; l++){
+            for (int m=1; m<5-l; m++){
+                if (a[m] <a[m-1]){
+                    temp = a[m];
+                    a[m-1] = a[m];
+                    a[m-1] = temp;}
+                else{
+                    cout<<"";
+                }
+            }
+        }cout<<temp<<endl;
+    }
+    else if (selection == 'l' || selection =='L'){
+        int temp1 {};
+        for (int l1= 0; l1<5; l1++){
+            for (int m1=1; m1<5-l1; m1++){
+                if (a[m1] >a[m1-1]){
+                    temp1 = a[m1];
+                    a[m1-1] = a[m1];
+                    a[m1-1] = temp1;}
+                else{
+                    cout<<"";
+                }
+            }
+        }cout<<temp1<<endl;
+    }
+    else if (selection=='q' || selection=='Q')
+        cout<<"Quit"<<endl;
+    else
+        cout<<"invalid attempt Try again!"<<endl;
+	return 0;
+}
